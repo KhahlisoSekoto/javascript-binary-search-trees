@@ -23,20 +23,20 @@ function printTraversals(tree) {
   console.log('In Order:   ', inOrder.join(', '));
 }
 
-// 1. Create a binary search tree from random numbers < 100
+// Create a binary search tree from random numbers < 100
 const randomNumbers = generateRandomArray(15, 100);
 const bst = new Tree(randomNumbers);
 
 console.log('--- Initial Balanced Tree ---');
 prettyPrint(bst.root);
 
-// 2. Confirm that the tree is balanced by calling isBalanced()
+//Confirm that the tree is balanced by calling isBalanced()
 console.log('Is tree balanced?', bst.isBalanced());
 
-// 3. Print out all elements in level, pre, post, and in order
+//Print out all elements in level, pre, post, and in order
 printTraversals(bst);
 
-// 4. Unbalance the tree by adding several numbers > 100
+//Unbalance the tree by adding several numbers > 100
 bst.insert(105);
 bst.insert(120);
 bst.insert(150);
@@ -46,17 +46,17 @@ bst.insert(250);
 console.log('\n--- After Adding Numbers > 100 ---');
 prettyPrint(bst.root);
 
-// 5. Confirm that the tree is unbalanced by calling isBalanced()
+//Confirm that the tree is unbalanced by calling isBalanced()
 console.log('Is tree balanced?', bst.isBalanced());
 
-// 6. Balance the tree by calling rebalance()
+//Balance the tree by calling rebalance()
 bst.rebalance();
 
 console.log('\n--- After Rebalancing ---');
 prettyPrint(bst.root);
 
-// 7. Confirm that the tree is balanced by calling isBalanced()
+//Confirm that the tree is balanced by calling isBalanced()
 console.log('Is tree balanced?', bst.isBalanced());
 
-// 8. Print out all elements in level, pre, post, and in order
+//Print out all elements in level, pre, post, and in order
 printTraversals(bst);
